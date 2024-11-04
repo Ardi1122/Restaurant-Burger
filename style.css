@@ -1,0 +1,1038 @@
+:root {
+    --color-yellow: rgb(253, 237, 4);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "nav"
+    "home"
+    "about_us"
+    "menu"
+    "pages"
+    "pages2"
+    "contact_us"
+    ;
+    font-family: sans-serif;
+    background-color: rgb(15, 14, 14);
+    row-gap: 4.5rem;
+}
+nav {
+    grid-area: nav;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    background: linear-gradient(135deg, rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    z-index: 99;
+}
+.nav_content {
+    /* max-width: 1200px; */
+    margin: auto;
+    padding: .6rem 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .icon {
+    font-size: 1.2rem;
+    color: white;
+}
+nav .icon span {
+    color: var(--color-yellow);
+}
+
+.nav .checkbox {
+    display: none;
+}
+
+nav input {
+    display: none;
+}
+
+nav .checkbox i {
+    font-size: 2rem;
+    color: var(--color-yellow);
+    display: none;
+}
+
+nav ul {
+    justify-self: flex-end;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li {
+    display: inline-block;
+    
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding-bottom: 10px;
+}
+nav ul li a:hover {
+    border-bottom: 1.5px solid var(--color-yellow);
+}
+nav .link_shop {
+    background-color: var(--color-yellow);
+    padding: 10px 20px;
+    /* border-radius: 5px; */
+    color: black;
+    transition: .5s;
+    text-align: center;
+}
+nav .link_shop:hover {
+    border-bottom: 1px solid var(--color-yellow);
+    background-color: rgb(15, 14, 14);
+    color: white;
+}
+
+
+/*home*/
+#home {
+    color: white;
+    grid-area: home;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr .3fr;
+    grid-template-areas: 
+    "content_home content_home content_home"
+    "deskripsi_home_food deskripsi_home_food deskripsi_home_food"
+    ;
+    align-items: center;
+    row-gap: 1rem;
+    padding: 0px 5%
+}
+.content_home {
+    grid-area: content_home;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+.image_home {
+    width: 80%;
+}
+.image_home img {
+    width: 100%;
+}
+.deskripsi_home {
+    display: grid;
+    row-gap: 1rem;
+}
+.deskripsi_home h1 {
+    font-size: 2.5rem;
+ }
+ .line {
+    background-color: var(--color-yellow);
+    width: 20%;
+    padding: 1px;
+ }
+ .deskripsi_home p {
+    line-height: 1.5rem;
+ }
+.review {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 10px;
+}
+.rev img {
+    width: 100%;
+}
+.link_home_learn a {
+    color: black;
+    background-color: var(--color-yellow);
+    padding: 10px;
+    /* border-radius: 5px; */
+    transition: .5s;
+ }
+ .link_home_learn a:hover {
+    border-bottom: 1px solid var(--color-yellow);
+    background-color: rgb(15, 14, 14);
+    color: white;
+ }
+
+.deskripsi_home_food {
+    grid-area: deskripsi_home_food;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "food snack beverage"
+    ;
+    column-gap: 1rem;
+}
+.content {
+    display: grid;
+    grid-template-columns: .6fr 1fr;
+    transition: .5s;
+    align-items: center;
+    
+}
+.content:hover {
+    transform: translatey(-10px);
+}
+.image_food {
+    width: 70%;
+}
+.image_food img {
+    width: 100%;
+    
+}
+.image_snack {
+    width: 70%;
+}
+.image_snack img {
+    width: 100%;
+}
+.image_beverage {
+    width: 70%;
+}
+.image_beverage img {
+    width: 100%;
+}
+.food h1, .snack h1, .beverage h1 {
+    color: white;
+    font-size: .8rem;
+}
+.food p, .snack p, .beverage p {
+    font-size: .8rem;
+
+}
+.snack a, .beverage a {
+    color: rgb(253, 237, 4);
+}
+.food a {
+    color: black;
+}
+.food {
+    grid-area: food;
+    background-color: rgb(253, 237, 4);
+}
+.snack {
+    grid-area: snack;
+    background-color: green;
+}
+.beverage {
+    grid-area: beverage;
+    background-color: red;
+}
+
+
+/*about us*/
+#about_us {
+    grid-area: about_us;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .1fr 1fr;
+    grid-template-areas:  
+    "about_all about_all"
+    "about_image about_deskripsi"
+    ;
+    padding: 0% 5%;
+    justify-items: center;
+    column-gap: 2rem;
+    row-gap: 5rem;
+    color: white;
+}
+.about_all {
+    grid-area: about_all;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+}
+.about_burger, .about_cola {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px 25px;
+    background: linear-gradient(135deg, rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+}
+.deskripsi_about1, .deskripsi_about2 {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.p_about1, .p_about2, .link_about1 a, .link_about2 a{
+    color: var(--color-yellow);
+}
+.about_burger img {
+    width: 80%;
+    padding: 15px;
+}
+.about_cola img {
+    width: 60%;
+    padding: 25px 20px;
+}
+.about_image {
+    grid-area: about_image;
+}
+.about_image img {
+    width: 100%;
+}
+.about_deskripsi {
+    grid-area: about_deskripsi;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    line-height: 1.5rem;
+}
+.about_deskripsi h1 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+}
+.line_about {
+    background-color: var(--color-yellow);
+    width: 20%;
+    padding: 1px;
+}
+.list_about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: flex-start;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+.link_about_us a{
+    padding: 10px;
+    color: black;
+    background-color: var(--color-yellow);
+    transition: .5s;
+}
+.link_about_us a:hover {
+    border-bottom: 1px solid var(--color-yellow);
+    background-color: rgb(15, 14, 14);
+    color: white;
+}
+
+/*menu*/
+#menu {
+    grid-area: menu;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .2fr 1fr;
+    padding: 0% 5%;
+    color: white;
+    row-gap: 2rem;
+    overflow: hidden;
+}
+.deskripsi_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.line_menu {
+    padding: 1px;
+    width: 20%;
+    background-color: var(--color-yellow);
+}
+.deskripsi_menu h1 {
+    font-size: rem;
+}
+.deskripsi_menu p {
+    line-height: 1.5rem;
+}
+.link_menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 4rem;
+}
+.link a {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    color: white;
+}
+.image_menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "burger1 burger2 burger3 burger4"
+    "burger5 burger6 burger7 burger8"
+    ;
+    column-gap: 2.8rem;
+    row-gap: 2.8rem;
+}
+.menu {
+    display: grid;
+    grid-template-rows: .1fr .1fr .1fr .1fr;
+    row-gap: 1rem;
+}
+.menu img {
+    width: 100%;
+    background: linear-gradient(135deg, rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0));
+    backdrop-filter: blur(20px);
+    padding: 15px 0px;
+    border-radius: 10px;
+}
+.image_menu h1 {
+    font-size: 1.2rem;
+}
+.image_menu p {
+    font-size: .8rem;
+}
+.price {
+    color: var(--color-yellow);
+}
+.burger1 {
+    grid-area: burger1;
+}
+.burger2 {
+    grid-area: burger2;
+}
+.burger3 {
+    grid-area: burger3;
+}
+.burger4 {
+    grid-area: burger4;
+}
+.burger5 {
+    grid-area: burger5;
+}
+.burger6 {
+    grid-area: burger6;
+}
+.burger7 {
+    grid-area: burger7;
+}
+.burger8 {
+    grid-area: burger8;
+}
+
+#pages {
+    grid-area: pages;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .2fr 1fr;
+    padding: 0% 5%;
+    row-gap: 1rem;
+}
+.service_pages {
+    background-image: url(background\ service.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background: linear-gradient(135deg, rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    padding: 10%;
+}
+.service_side {
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .1fr .1fr;
+    justify-items: center;
+    align-items: center;
+    row-gap: 1rem;
+    color: white;
+    text-align: center;
+}
+.image_service {
+    width: 10%;
+}
+.image_service img {
+    width: 100%;
+}
+.deskripsi_service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.deskripsi_service h1 {
+    font-size: 1.8rem;
+}
+.line_service {
+    background-color: var(--color-yellow);
+    padding: 1px;
+    width: 10%;
+}
+.deskripsi_service p {
+    line-height: 1.2rem;
+}
+
+.content_pages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0% 10%;
+}
+.phone_pages {
+    align-self: center;
+    width: 60%;
+}
+.phone_pages img {
+    width: 100%;
+}
+.deskripsi_pages {
+    align-self: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.deskripsi_pages h1 {
+    font-size: 1.8rem;
+}
+.line_pages {
+    width: 20%;
+    background-color: var(--color-yellow);
+    padding: 1px;
+}
+.order_service {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 70%;
+}
+.order {
+    display: flex;
+    gap: 1rem;
+    background: linear-gradient(135deg, rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    padding: 10px;
+}
+.image_delivery, .image_promo {
+    width: 9%;
+    align-self: center;
+} 
+.image_delivery img, .image_promo img {
+    width: 100%;
+    padding: 5px;
+    background-color: var(--color-yellow);
+}
+.deskripsi_delivery h2, .deskripsi_promo h2 {
+    font-size: 1rem;
+}
+.deskripsi_delivery p, .deskripsi_promo p {
+    font-size: .6rem;
+}
+.app {
+    display: flex;
+    gap: 1rem;
+    width: 50%;
+}
+.app_store img{
+    width: 100%;
+}
+.play_store img{
+    width: 100%;
+}
+
+/*pages2*/
+#pages2 {
+    grid-area: pages2;
+    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-rows: 1fr;
+}
+.pages_customer {
+    background: linear-gradient(135deg, rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 5%;
+    row-gap: 1rem;
+}
+.judul_customer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    color: white;
+    padding: 0% 10%;
+    text-align: center;
+}
+.line_customer {
+    width: 15%;
+    padding: 1px;
+    background-color: var(--color-yellow);
+}
+.customer_person {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+}
+.customer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.content_person {
+    display: grid;
+    grid-template-columns: .5fr 1fr 1fr;
+    align-items: center;
+}
+.content_person img {
+    width: 50%;
+}
+.deskripsi_person1 h3, .deskripsi_person2 h3, .deskripsi_person3 h3 {
+    font-size: .8rem;
+}
+.deskripsi_person1 p, .deskripsi_person2 p, .deskripsi_person3 p {
+    font-size: .7rem;
+}
+.telpon_person1, .telpon_person2, .telpon_person3 {
+    justify-self: flex-start;
+}
+.telpon_person1 img, .telpon_person2 img, .telpon_person3 img {
+    width: 46%;
+    padding-left: 50%;
+}
+
+.pages_customer2 {
+    background-image: url(background_customer.jpeg);
+    background-size: 100%;
+}
+.deskripsi_pages_customer2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 10% 50% 10% 5%;
+    color: white;
+
+}
+.deskripsi_pages_customer2 h1 {
+    font-size: 1.8rem;
+}
+.link_customer2 a {
+    background-color: var(--color-yellow);
+    color: black;
+    padding: 10px 20px;
+}
+
+.line_customer2 {
+    width: 20%;
+    padding: 1px;
+    background-color: var(--color-yellow);
+}
+
+.pages_customer3 {
+    display: grid;
+    grid-template-rows: .4fr 1fr;
+    row-gap: 1rem;
+    padding-top: 4rem;
+}
+
+.article_customer3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    padding: 0% 5%;
+    color: white;
+}
+.deskripsi_customer3 {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+.line_customer3 {
+    width: 15%;
+    padding: 1px;
+    background-color: var(--color-yellow);
+}
+.picture1 img, .picture2 img, .picture3 img {
+    width: 100%;
+    border-radius: 5px;
+}
+.article1, .article2, .article3 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.article {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.article h2 {
+    font-size: 1.2rem;
+}
+.read_more a {
+    color: var(--color-yellow);
+}
+
+#contact_us {
+    grid-area: contact_us;
+    display: grid;
+    grid-template-rows: 1fr;
+    row-gap: 2rem;
+}
+.send_email {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-yellow);
+    align-items: center;
+    padding: 7% 5%;
+}
+.deskripsi_send_email {
+    display: grid;
+    row-gap: 1rem;
+}
+.deskripsi_send_email h1 {
+    font-size: 1.8rem;
+}
+.deskripsi_send_email p {
+    color: white;
+}
+.input_email {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    column-gap: 1rem;
+}
+form input {
+    border: none;
+    outline: none;
+    padding: 10px 120px 10px 10px;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.send_your_email a {
+    color: white;
+    /* font-size: .6rem; */
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.deskripsi_contact_us {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "deskripsi_contact support phone address"
+    "deskripsi_contact support email follow"
+    ;
+    color: white;
+    padding: 0% 5%;
+    column-gap: 2rem;
+}
+.deskripsi_contact {
+    grid-area: deskripsi_contact;
+    padding-bottom: 1rem;
+}
+.deskripsi_contact span {
+    color: var(--color-yellow);
+}
+.deskripsi_contact p {
+    padding-top: 1rem;
+    font-size: .8rem;
+    line-height: 1.2rem;
+} 
+.support {
+    grid-area: support;
+    display: grid;
+    row-gap: 1rem;
+}
+.support ul li {
+    display: block;
+    text-decoration: none;
+    display: grid;
+    padding-bottom: 1rem;
+}
+.phone {
+    grid-area: phone;
+    padding-bottom: 1rem;
+}
+.email {
+    grid-area: email;
+    padding-bottom: 1rem;
+}
+.address {
+    grid-area: address;
+    padding-bottom: 1rem;
+}
+.follow {
+    grid-area: follow;
+}
+.phone p, .email p, .address p {
+    font-size: .8rem;
+    padding-top: 1rem;
+}
+
+@media (max-width: 950px) {
+    #about_us {
+        grid-template-columns: 1fr;
+        grid-template-rows: .6fr .2fr;
+        grid-template-areas: 
+        "about_all"
+        "about_all"
+        "about_deskripsi"
+        ;
+    }
+    .about_image {
+        display: none;
+    }
+
+    .about_burger {
+        align-self: center;
+    }
+    .about_cola {
+        align-self: center;
+    }
+
+    .send_email {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .input_email {
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+    }
+    form input {
+        padding: 10px;
+    }
+}
+
+
+
+
+@media (max-width : 800px) {
+    .container {
+        grid-template-rows: 1fr;
+    }
+    
+    nav .checkbox {
+        display: block;
+        justify-self: flex-end;
+        padding: 0% 3%;
+        z-index: 9;
+    }
+    nav .checkbox i {
+        display: block;
+    }
+    ul {
+        position: absolute;
+        width: 100%;
+        left: -120%;
+        top: 4.4rem;
+        padding: 20% 0%;
+        flex-direction: column;
+        gap: 3rem;
+        height: 110vh;
+        width: 40%;
+
+    }
+
+    nav #check:checked ~ ul {
+        left: 0;
+    }
+    .nav_content ul {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        list-style: none;
+        transition: left 0.3s;
+        background: linear-gradient(135deg, rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0));
+        backdrop-filter: blur(10px);
+    }
+    .link_shop {
+        display: none;
+    }
+
+    #home {
+        grid-template-rows: 1fr .6fr;
+        align-items: center;
+        row-gap: 2.5rem;
+    }
+    .content_home {
+        align-self: center;
+    }
+    .deskripsi_home h1 {
+        font-size: 1.5rem;
+    }
+    .deskripsi_about1 h1, .deskripsi_about2 h1, .about_deskripsi h1,.judul_customer h1, .deskripsi_service h1, .deskripsi_pages h1, .deskripsi_pages_customer2 h1{
+        font-size:
+        1.2rem;
+    }
+    .image_menu h1 {
+        font-size: 1rem;
+    }
+    .deskripsi_home p, .rev, .link_home_learn, .deskripsi_about1, .deskripsi_about2, .about_deskripsi, .deskripsi_service p, .deskripsi_pages p,.judul_customer p, .customer_person p, .deskripsi_pages_customer2 p, .deskripsi_pages_customer2 a{
+        font-size: .8rem;
+    }    
+
+    /*pages*/
+    .content_pages {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1r 1fr;
+        justify-items: center;
+        padding: 0%;
+    }
+    .deskripsi_pages {
+        align-items: center;
+    }
+    .deskripsi_pages h1, .deskripsi_pages p {
+        text-align: center;
+    }
+
+    .article_customer3 {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
+
+    .deskripsi_contact_us {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        row-gap: 2rem;
+        grid-template-areas: 
+        "deskripsi_contact support"
+        "phone email"
+        "address follow"
+        ;
+        column-gap: 5rem;
+    }
+
+}
+
+
+@media only screen and (max-width: 670px) {
+    .container {
+        grid-template-rows: 2fr;
+    }
+    nav {
+        padding: .5rem;
+    }
+    /*home*/
+    #home {
+        grid-template-rows: .1fr;
+    }
+    .content_home {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "image_home"
+        "deskripsi_home"
+        ;
+    }
+    .deskripsi_home {
+        justify-items: center;
+        text-align: center;
+    }
+    .review {
+        justify-items: center;
+        column-gap: 2rem;
+    }
+    .deskripsi_home_food {
+        align-self: flex-start;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "food"
+        "snack"
+        "beverage"
+        ;
+        row-gap: 1rem;
+    }
+
+    /*about us*/
+    .about_all {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+        row-gap: 1rem;
+    }
+    .about_burger, .about_cola {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .deskripsi_about1, .deskripsi_about2 {
+        text-align: center;
+    }
+    .about_burger img {
+        width: 50%;
+    }
+    .about_cola img {
+        width: 45%;
+    }
+    .about_image {
+        display: none;
+    }
+    .about_deskripsi h1, .about_deskripsi , .link_about_us {
+        text-align: center;
+    }
+    .about_deskripsi h1 {
+        border-bottom: 1px solid yellow;
+        padding-bottom: 10px;
+    }
+    .line_about {
+        justify-self: center;
+        display: none;
+    }
+    .list_about {
+        justify-items: center;
+    }
+
+    /*menu*/
+    .deskripsi_menu {
+        text-align: center;
+    }
+    .image_menu {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        "burger1 burger2"
+        "burger3 burger4"
+        "burger5 burger6"
+        "burger7 burger8"
+        ;
+    }
+    .link {
+        display: none;
+    }
+
+    /*pages*/
+    .deskripsi_delivery p, .deskripsi_promo p {
+        text-align: left;
+    }
+    .customer_person {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 1rem;
+    }
+
+    .deskripsi_pages_customer2 {
+        padding-right: 5%;
+    }
+
+    .deskripsi_contact_us {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        row-gap: 2rem;
+        grid-template-areas: 
+        "deskripsi_contact"
+        "support"
+        "phone"
+        "email"
+        "address"
+        "follow"
+        ;
+    }
+    
+}
